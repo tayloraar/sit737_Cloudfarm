@@ -13,4 +13,51 @@ nav{
 nav .nav-btn{
     font-family: 'Glacial Indifference';
     color: #f4f0d9;  
+    vertical-align: middle;
+}
+
+.waves-effect{
+    background-color: #638c80;
+    color: #f4f0d9;
+    font-family: 'Glacial Indifference';   
+}
+.navbar-material .nav-wrapper .brand-logo img {
+    height: 64px;
+}
+
+#NavLogo 
+{
+    display: inline-block;
+    margin-top: 10px;
+   
+    width: auto;
+    max-height: 60px;
+}
+
+
+ul.tabs {
+    display : flex;
+    color: #f4f0d9;
+    font-family: 'Glacial Indifference';
+}
+
+li.tab {
+   flex-basis : 33.33%;
+   color: #f4f0d9;
+   font-family: 'Glacial Indifference';
+}
+
+.tab {
+    flex-basis : 33.33%;
+    color: #f4f0d9;
+    font-family: 'Glacial Indifference';
+ }
+
+.tabs .tab a.active{
+    color: #f4f0d9;
+    font-family: 'Glacial Indifference';
+}
+
+.tabs.tabs-transparent .tab a:hover, .tabs.tabs-transparent .tab a.active {
+    color: #f4f0d9;
 }
