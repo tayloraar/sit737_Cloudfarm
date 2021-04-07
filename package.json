@@ -4,12 +4,16 @@
   "description": "SIT737-MVP",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aaron Taylor",
   "license": "ISC",
   "dependencies": {
+    "cf-deployment-tracker-client": "*",
     "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "materialize-css": "^1.0.0-rc.2",
     "nodemon": "^2.0.7"
   }
 }
