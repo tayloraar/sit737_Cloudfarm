@@ -1,0 +1,16 @@
+body {
+    background-color: #f4f0d9;
+    font-family: 'Glacial Indifference';
+    color: #638c80;
+}
+
+nav{
+    background-color: #638c80;
+    color: #f4f0d9;
+    font-family: 'Glacial Indifference';
+}
+
+nav .nav-btn{
+    font-family: 'Glacial Indifference';
+    color: #f4f0d9;  
+}
