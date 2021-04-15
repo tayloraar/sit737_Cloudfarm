@@ -77,3 +77,20 @@ header, main, footer {
     padding-bottom: 0px;
 
 }
+
+.page-footer{
+    background-color: #638c80;
+    color: #f4f0d9;
+    font-family: 'Glacial Indifference';
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
