@@ -2,7 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
 const WebAppStrategy = require('ibmcloud-appid').WebAppStrategy;
-const CALLBACK_URL = '/ibm/cloud/appid/callback';
+const CALLBACK_URL = "/ibm/cloud/appid/callback";
 
 
 const app = express();
@@ -25,7 +25,7 @@ passport.use(new WebAppStrategy({
   clientId: "460d69ad-292c-4454-a65c-9a0575a23696",
   secret: "YzBiMjI2ODctYjE0NC00MDI5LThmNzEtYWU0YWIzMmM2YjEw",
   oauthServerUrl: "https://au-syd.appid.cloud.ibm.com/oauth/v4/1c02a05d-5037-47f8-9c13-edcb5e7ebe2d",
-  redirectUri: "https://au-syd.appid.cloud.ibm.com/appid/callback" //|| "http://localhost:8080/appid/callback"
+  redirectUri: "{app-url}" + CALLBACK_URL
   //redirectUri: "http://localhost:8080/appid/callback"
   //redirectUri: `http://localhost:${port}` + CALLBACK_URL
 }));
