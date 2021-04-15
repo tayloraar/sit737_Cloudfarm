@@ -25,9 +25,7 @@ passport.use(new WebAppStrategy({
   clientId: "460d69ad-292c-4454-a65c-9a0575a23696",
   secret: "YzBiMjI2ODctYjE0NC00MDI5LThmNzEtYWU0YWIzMmM2YjEw",
   oauthServerUrl: "https://au-syd.appid.cloud.ibm.com/oauth/v4/1c02a05d-5037-47f8-9c13-edcb5e7ebe2d",
-  redirectUri: "{app-url}" + CALLBACK_URL
-  //redirectUri: "http://localhost:8080/appid/callback"
-  //redirectUri: `http://localhost:${port}` + CALLBACK_URL
+  redirectUri: "https://cloudfarm.us-south.cf.appdomain.cloud//appid/callback"
 }));
 
 app.get('/appid/callback', passport.authenticate(WebAppStrategy.STRATEGY_NAME));
