@@ -2,7 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
 const WebAppStrategy = require('ibmcloud-appid').WebAppStrategy;
-const CALLBACK_URL = '/ibm/could/appid/callback';
+const CALLBACK_URL = '/ibm/cloud/appid/callback';
 
 
 const app = express();
