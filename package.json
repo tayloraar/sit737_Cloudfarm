@@ -10,6 +10,7 @@
   "author": "Aaron Taylor",
   "license": "ISC",
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.11.3",
     "cf-deployment-tracker-client": "*",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
