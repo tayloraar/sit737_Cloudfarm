@@ -1,14 +1,24 @@
-//lets test
-//second test
-//third test
+
+//const mapSrc= `https://maps.googleapis.com/maps/api/js?key=${process.env.MAPSAPI}&callback=initMap`
 
 $(document).ready(function(){
     $('.tabs').tabs();
     $('.sidenav').sidenav();
-
-    
+   
+    $.get("/mapSet", function(mapsAPI){
+      console.log(mapsAPI);
+      $("#scripts").append(`<script async
+      src="https://maps.googleapis.com/maps/api/js?key=${mapsAPI}&callback=initMap">
+  </script>`)
+    })
 
   });
+
+    function writeGoogle (){
+    
+console.log(process.env.MAPSAPI);
+    }
+
 
   function initMap(){
     var options = {
@@ -20,10 +30,17 @@ $(document).ready(function(){
     var marker = new google.maps.Marker({
       position: {lat:-37.849555146932836,lng:145.11508912830388},
       map:map,
-      title: "Home Base"
+      title: "Home Base",
+      icon: 'http://maps.google.com/mapfiles/kml/shapes/parks.png'
     })
 
   }
+
+  // const fetchMap = async =>{
+  //   src= `https://maps.googleapis.com/maps/api/js?key=${mapsAPI}&callback=initMap`
+  // }
+     
+ 
 //   document.addEventListener('DOMContentLoaded', function() {
 //     var elems = document.querySelectorAll('.sidenav');
 //     var instances = M.Sidenav.init(elems, options);

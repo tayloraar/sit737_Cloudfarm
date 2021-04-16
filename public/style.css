@@ -90,5 +90,11 @@ header, main, footer {
     height: 75vh;
     width: 100%;
   }
+
+  .card{
+    background-color: #638c80de;
+    color: #f4f0d9;
+    font-family: 'Glacial Indifference'; 
+  }
   
   /* Optional: Makes the sample page fill the window. */
