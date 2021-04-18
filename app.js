@@ -2,13 +2,35 @@ const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
 const WebAppStrategy = require('ibmcloud-appid').WebAppStrategy;
-require('dotenv').config();
+const MongoClient = require('mongodb').MongoClient
+const Require = require('dotenv').config();
 const CALLBACK_URL = "/appid/callback";
-
-console.log(process.env.MAPSAPI);
-
-
 const app = express();
+//console.log(process.env.MAPSAPI);
+
+//DataBase Management
+const uri = `mongodb+srv://${process.env.MDBCFUN}:${process.env.MDBCFPW}@cf-cluster1.hngdb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Setting collection variables
+var collectionFarms;
+var collectionMessages;
+var collectionPlants;
+
+
+// Connecting collection variables to database collections
+client.connect(err => {
+  collectionMessages = client.db("CloudFarm").collection("messages");
+  collectionFarms = client.db("CloudFarm").collection("farms");
+  collectionPlants = client.db("CloudFarm").collection("plants"); 
+    collection = client.db("CloudFarm").listCollections().toArray(function(err,items){
+    console.log(items)
+  })
+
+});
+
+
+
 app.use(session({
    secret: "123456",
    resave: true,
@@ -62,5 +84,8 @@ app.listen(port, () => {
   console.log(`Example app isn't listening at http://localhost:${port}`)
 })
 
+
+
  //this is only needed for Cloud foundry 
  require("cf-deployment-tracker-client").track();
+
