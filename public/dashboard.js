@@ -1,12 +1,11 @@
 
-//const mapSrc= `https://maps.googleapis.com/maps/api/js?key=${process.env.MAPSAPI}&callback=initMap`
 
 $(document).ready(function(){
     $('.tabs').tabs();
     $('.sidenav').sidenav();
    
     $.get("/mapSet", function(mapsAPI){
-      console.log(mapsAPI);
+      // console.log(mapsAPI);
       $("#scripts").append(`<script async
       src="https://maps.googleapis.com/maps/api/js?key=${mapsAPI}&callback=initMap">
   </script>`)
